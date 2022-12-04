@@ -138,11 +138,11 @@ int main()
 {
     const int hashmap_size = 10;
     struct set_table *table = set_table_new(hashmap_size);
-    set_insert(table, "Hello", hashmap_size);
-    set_insert(table, "World", hashmap_size);
-    set_insert(table, "test", hashmap_size);
-    set_insert(table, "right", hashmap_size);
-    set_insert(table, "ok", hashmap_size);
+    set_insert(table, "Yoshi", hashmap_size);
+    set_insert(table, "Mario", hashmap_size);
+    set_insert(table, "Luigi", hashmap_size);
+    set_insert(table, "Bowser", hashmap_size);
+    set_insert(table, "Peach", hashmap_size);
     struct set_node **current_node = table->nodes;
     size_t index = 0;
     struct set_node *head_node;
@@ -159,7 +159,7 @@ int main()
             }
         }
     }
-    printf("value is: %s\n", set_search_key(table, "test", hashmap_size)->key);
-    set_Remove(table,"ok",hashmap_size);
+    printf(" value is: %s\n", set_search_key(table, "Yoshi", hashmap_size)->key);
+    set_Remove(table,"Peach",hashmap_size);
     return 0;
 }
